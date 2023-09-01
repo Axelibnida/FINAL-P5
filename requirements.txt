@@ -9,3 +9,4 @@ MarkupSafe==2.1.1
 Werkzeug==2.2.2
 gensim
 nltk==3.6.3
+Sklearn
