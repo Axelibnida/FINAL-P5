@@ -7,6 +7,12 @@
 print('Hello world')
 
 
+# In[2]:
+
+
+import pandas as pd
+
+
 # In[ ]:
 
 
