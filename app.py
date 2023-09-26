@@ -21,15 +21,10 @@ def predict():
     try:
         data = request.get_json()
         text = data['text']
-
         tokens = preprocess_text(text)
-
         X_vectorized = vectorizer.transform([' '.join(tokens)])
-
         predictions = clf.predict(X_vectorized)
-
-	predicted_tags = mlb.inverse_transform(predictions)
-
+        predicted_tags = mlb.inverse_transform(predictions)
         return jsonify({'tags': predicted_tags[0]})
     except Exception as e:
         return jsonify({'error': str(e)})
