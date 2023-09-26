@@ -15,8 +15,8 @@ def preprocess_text(text):
 vectorizer = joblib.load('vectorizer.pkl')
 clf = joblib.load('clf.pkl')
 
-@app.route('/predict_tags', methods=['POST'])
-def predict_tags_api():
+@app.route('/predict', methods=['POST'])
+def predict():
     try:
         data = request.get_json()
         text = data['text']
