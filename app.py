@@ -14,6 +14,7 @@ def preprocess_text(text):
 
 vectorizer = joblib.load('vectorizer.pkl')
 clf = joblib.load('clf.pkl')
+mlb = joblib.load('mlb.pkl')
 
 @app.route('/predict', methods=['POST'])
 def predict():
