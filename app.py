@@ -38,6 +38,7 @@ def predict_lda():
     try:
         data = request.get_json()
         text = data['text']
+        tokens = preprocess_text(text)
         X_vectorized = vectorizer_lda.transform([' '.join(tokens)])
         prediction = lda.transform(X_vectorized)
         return jsonify({'Prediction': prediction})
