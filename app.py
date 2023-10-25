@@ -19,7 +19,7 @@ mlb = joblib.load('mlb.pkl')
 vectorizer_lda = joblib.load('vectorizer_lda.pkl')
 lda = joblib.load('lda.pkl')
 
-@app.route('/predict', methods=['POST'])
+"""@app.route('/predict', methods=['POST'])
 def predict():
     try:
         data = request.get_json()
@@ -30,7 +30,7 @@ def predict():
         predicted_tags = mlb.inverse_transform(predictions)
         return jsonify({'tags': predicted_tags[0]})
     except Exception as e:
-        return jsonify({'error': str(e)})
+        return jsonify({'error': str(e)})"""
 
 
 @app.route('/predict_lda', methods=['POST'])
