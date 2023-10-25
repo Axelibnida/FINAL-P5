@@ -43,7 +43,7 @@ def predict_lda():
         tokens = preprocess_text(text)
         X_vectorized = vectorizer_lda.transform([' '.join(tokens)])
         prediction = lda.transform(X_vectorized)
-	prediction_list = prediction.tolist()
+        prediction_list = prediction.tolist()
         return jsonify({'Prediction': prediction_list})
     except Exception as e:
         return jsonify({'error': str(e)})
